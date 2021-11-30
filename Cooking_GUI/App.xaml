@@ -1,0 +1,9 @@
+﻿<Application x:Class="TD_F_SENEJKO_TCHIKLADZE.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TD_F_SENEJKO_TCHIKLADZE"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

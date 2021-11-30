@@ -1,0 +1,28 @@
+﻿<Page x:Class="TD_F_SENEJKO_TCHIKLADZE.PageCreationCompte"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TD_F_SENEJKO_TCHIKLADZE"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageCreationCompte" Background="White" >
+
+    <Grid>
+        <Button Content=" Retour " HorizontalAlignment="Left" Margin="725,15,0,0" VerticalAlignment="Top" Click="clickDeconnexion"/>
+
+        <Frame x:Name="PageDeCreationCompte" NavigationUIVisibility="Hidden"/>
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="255,20,0,0" Text=" Création de votre compte " TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" FontSize="22"/>
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="255,100,0,0" Text="Entrez un nom d'utilisateur" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="270"/>
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="330,100,0,0" Text="*" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" Foreground="Red"/>
+
+        <TextBox Name="TextBox1" HorizontalAlignment="Left" Height="25" Margin="290,125,0,0" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="255,175,0,0" Text="Entrez votre numéro de téléphone" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="270"/>
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="350,175,0,0" Text="*" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" Foreground="Red"/>
+        <TextBox Name="TextBox2" HorizontalAlignment="Left" Height="25" Margin="335,200,0,0" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
+        <Button Content=" Valider " HorizontalAlignment="Left" Margin="367,265,0,0" VerticalAlignment="Top" Click="clickValider"/>
+        <Button Content=" Accédez à votre compte " HorizontalAlignment="Left" Margin="590,385,0,0" VerticalAlignment="Top" Click="clickClient"/>
+
+    </Grid>
+</Page>

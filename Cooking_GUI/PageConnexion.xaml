@@ -1,0 +1,25 @@
+﻿<Page x:Class="TD_F_SENEJKO_TCHIKLADZE.PageConnexion"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TD_F_SENEJKO_TCHIKLADZE"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageConnexion" Background="White" >
+
+    <Grid>
+        <Frame x:Name="PageDeConnexion" NavigationUIVisibility="Hidden"/>
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="215,20,0,0" Text=" BIENVENUE SUR COOKING ! " TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" FontSize="22"/>
+        <TextBlock Name="TextBlock1" HorizontalAlignment="Left" Height="45" Margin="255,130,0,0" Text="Nom d'utilisateur" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="270"/>
+        <TextBox Name="TextBox1" HorizontalAlignment="Left" Height="25" Margin="290,155,0,0" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="255,205,0,0" Text="Identifiant client" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="270"/>
+        <TextBox Name="TextBox2" HorizontalAlignment="Left" Height="25" Margin="325,230,0,0" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="130"/>
+        <Button Content=" Connectez-vous " HorizontalAlignment="Left" Margin="340,290,0,0" VerticalAlignment="Top" Click ="clickVerification" />
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="215,375,0,0" Text="Pas encore de compte ?" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="270"/>
+        <Button Content=" Créez-en un " HorizontalAlignment="Left" Margin="425,375,0,0" VerticalAlignment="Top" Click="clickCreationCompte"/>
+        <TextBlock Name ="test1" HorizontalAlignment="Left" Height="25" Margin="215,400,0,0" Text="" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="270"/>
+        <Button Content=" Mode Démo " HorizontalAlignment="Left" Margin="700,410,0,0" VerticalAlignment="Top" Click="clickModeDémo"/>
+
+    </Grid>
+</Page>

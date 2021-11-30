@@ -1,0 +1,46 @@
+﻿<Page x:Class="TD_F_SENEJKO_TCHIKLADZE.PageDemo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TD_F_SENEJKO_TCHIKLADZE"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageDemo" Background="White">
+
+    <Grid>
+        <Button Content=" Retour " HorizontalAlignment="Left" Margin="725,15,0,0" VerticalAlignment="Top" Click="clickDeconnexion"/>
+
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="50,30,0,0" Text="Bienvenue dans le mode Démo de l'application Cooking " TextAlignment ="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="700" FontSize="25"/>
+
+        <TextBlock HorizontalAlignment="Left" Height="35" Margin="80,120,0,0" Text="Nombre de clients : " TextAlignment ="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" />
+        <TextBlock Name="TextBlock1" HorizontalAlignment="Left" Height="35" Margin="190,120,0,0" Text="" TextAlignment ="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+
+        <TextBlock HorizontalAlignment="Left" Height="35" Margin="80,170,0,0" Text="Nombre de créateurs : " TextAlignment ="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock Name="TextBlock2" HorizontalAlignment="Left" Height="35" Margin="210,170,0,0" Text="" TextAlignment ="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+
+        <TextBlock HorizontalAlignment="Left" Height="35" Margin="80,220,0,0" Text="Nombre de recettes : " TextAlignment ="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock Name="TextBlock3" HorizontalAlignment="Left" Height="35" Margin="210,220,0,0" Text="" TextAlignment ="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+
+        <DataGrid Name = "gridCréateurCommande" IsReadOnly="True" AutoGenerateColumns="False" Height="170" Width="350"  Margin="420,85,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nom des Créateurs" Binding="{Binding NomCréateur}" Width ="160"></DataGridTextColumn>
+                <DataGridTextColumn Header="Nombre total de commandes" Binding="{Binding NbTotalCommande}"  Width ="180"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <DataGrid Name = "gridProduit" IsReadOnly="True" AutoGenerateColumns="False" Height="150" Width="170"  Margin="100,270,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nom des Produits" Binding="{Binding NomProduit}" Width ="160"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content=" Afficher les Recettes " HorizontalAlignment="Left" Margin="300,330,0,0" VerticalAlignment="Top" Click="clickAfficherRecettes"/>
+        <DataGrid Name = "gridProduitRecettes" IsReadOnly="True" AutoGenerateColumns="False" Height="150" Width="175"  Margin="450,270,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nom des Recettes associés" Binding="{Binding NomRecette}" Width ="150"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+    </Grid>
+</Page>

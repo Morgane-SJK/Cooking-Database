@@ -1,0 +1,75 @@
+﻿<Page x:Class="TD_F_SENEJKO_TCHIKLADZE.PageCreationCdR"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TD_F_SENEJKO_TCHIKLADZE"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageCreationCdR" Background="White">
+
+    <Grid>
+        <Frame x:Name="PageCreationCDR" NavigationUIVisibility="Hidden"/>
+
+        <Button Content=" Annuler " HorizontalAlignment="Left" Margin="710,20,0,0" VerticalAlignment="Top" Click="clickAnnuler"/>
+
+        <TextBlock HorizontalAlignment="Left" Height="65" Margin="100,10,0,0" Text=" Vous souhaitez rejoindre notre équipe de Créateurs de recettes ? Il vous suffit juste de saisir une recette ! " TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="580" FontSize="20"/>
+        
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="50,100,0,0" Text="Nom de votre recette" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="170,100,0,0" Text="*" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="20" Foreground="Red"/>
+        <TextBox Name="TextBox1" HorizontalAlignment="Left" Height="25" Margin="225,95,0,0" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
+
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="480,100,0,0" Text="Type" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+
+        <ComboBox Name="ComboBox2" HorizontalAlignment="Left" Height="25" Margin="580,95,0,0" VerticalAlignment="Top" Width="185" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle  Fill="{Binding TypeRecette}" Width="16" Height="16" Margin="0,2,5,2" />
+                        <TextBlock Text="{Binding TypeRecette}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="70,140,0,0" Text="Descriptif" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="140,140,0,0" Text="*" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="20" Foreground="Red"/>
+        <TextBox Name="TextBox3" HorizontalAlignment="Left" Height="50" Margin="225,140,0,0" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="540"/>
+
+        <TextBlock HorizontalAlignment="Left" Height="25" Margin="160,220,0,0" Text="Choisissez vos Ingrédients : " TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="40,270,0,0" Text="Sélectionner un ingrédient" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+        <ComboBox Name="ComboBox1" SelectionChanged="UpdateUnite" HorizontalAlignment="Left" Height="25" Margin="225,265,0,0" VerticalAlignment="Top" Width="200" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="{Binding NomProduit}" Width="16" Height="16" Margin="0,2,5,2" />
+                        <TextBlock Text="{Binding NomProduit}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="50,320,0,0" Text="Quantité " TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+        <TextBox Name="TextBox4" HorizontalAlignment="Left" Height="25" Margin="110,315,0,0" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="40"/>
+        <TextBlock Name="TextBlock1" HorizontalAlignment="Left" Height="20" Margin="160,320,0,0" Text="{Binding Unite}" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+        <Button Content=" Ajouter l'ingrédient " HorizontalAlignment="Left" Margin="290,320,0,0" VerticalAlignment="Top" Click="clickAjouterIngredient"/>
+
+        <Button Content=" Supprimer un ingrédient " HorizontalAlignment="Left" Margin="275,355,0,0" VerticalAlignment="Top" Click="clickSupprimerIngredient"/>
+
+        <DataGrid Name = "gridListeIngredient" IsReadOnly="True" AutoGenerateColumns="False" Height="210" Width="330"  Margin="435,205,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Liste des ingrédients" Binding="{Binding NomProduit}" Width ="200"></DataGridTextColumn>
+                <DataGridTextColumn Header="Quantités" Binding="{Binding Quantite}"  Width ="60"></DataGridTextColumn>
+                <DataGridTextColumn Header="Unité" Binding="{Binding Unite}"  Width ="60"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="50,400,0,0" Text="Prix (en Cook)" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="150,400,0,0" Text="*" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="20" Foreground="Red"/>
+        <TextBox Name="TextBox5" HorizontalAlignment="Left" Height="25" Margin="180,395,0,0" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="40"/>
+        <Button Content=" Valider la recette " HorizontalAlignment="Left" Margin="295,400,0,0" VerticalAlignment="Top" Click="clickValiderRecette"/>
+
+
+    </Grid>
+</Page>

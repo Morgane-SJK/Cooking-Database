@@ -1,0 +1,46 @@
+﻿<Page x:Class="TD_F_SENEJKO_TCHIKLADZE.PageClient"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TD_F_SENEJKO_TCHIKLADZE"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageClient" Background="White">
+
+    <Grid>
+        <Frame x:Name="PageDeClient" NavigationUIVisibility="Hidden" />
+        <TextBlock Name="TextBlock1" HorizontalAlignment="Left" Height="45" Margin="80,20,0,0" Text="Bonjour, " TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="25"/>
+        <TextBlock Name="TextBlock2" HorizontalAlignment="Left" Height="45" Margin="180,20,0,0" Text="" TextAlignment ="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="25"/>
+        <TextBlock Name="TextBlock3" HorizontalAlignment="Left" Height="45" Margin="80,60,0,0" Text="Que voulez-vous commander ? " TextAlignment ="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" FontSize="20"/>
+        <TextBlock Name="TextBlock4" HorizontalAlignment="Left" Height="45" Margin="410,60,0,0" Text="Votre panier :" TextAlignment ="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" FontSize="20"/>
+
+        <DataGrid Name = "gridRecette" IsReadOnly="True" AutoGenerateColumns="False" Height="270" Width="300"  Margin="70,105,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Liste des Plats disponibles" Binding="{Binding NomRecette}" Width ="195"></DataGridTextColumn>
+                <DataGridTextColumn Header="Prix (en Cook)" Binding="{Binding PrixDeVente}"  Width ="95"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <DataGrid Name = "gridCommande" IsReadOnly="True" AutoGenerateColumns="False" Height="240" Width="360"  Margin="400,105,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Recettes sélectionnées" Binding="{Binding NomRecettePlat}" Width ="240"></DataGridTextColumn>
+                <DataGridTextColumn Header="Quantité" Binding="{Binding QuantitePlat}"  Width ="60"></DataGridTextColumn>
+                <DataGridTextColumn Header="Prix" Binding="{Binding Prix}"  Width ="50"></DataGridTextColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Content=" Espace Créateur " HorizontalAlignment="Left" Margin="665,45,0,0" VerticalAlignment="Top" Click="clickPageCdR"/>
+        <Button Content=" Déconnexion " HorizontalAlignment="Left" Margin="675,15,0,0" VerticalAlignment="Top" Click="clickDeconnexion"/>
+        <Button Content=" Ajouter au panier " HorizontalAlignment="Left" Margin="250,400,0,0" VerticalAlignment="Top" Click="clickAjouterAuPanier"/>
+        <Button Content=" Valider et payer " HorizontalAlignment="Left" Margin="650,400,0,0" VerticalAlignment="Top" Click="clickPayer"/>
+
+        <TextBlock Text="Quantité :" HorizontalAlignment="Left" Height="25" Margin="80,400,0,0" TextAlignment ="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
+        <TextBox Name="TextBox1" Text="1" HorizontalAlignment="Left" Height="25" Margin="150,400,0,0" TextAlignment ="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="40"/>
+
+        <TextBlock Text="Prix Total (en Cook) :" HorizontalAlignment="Left" Height="25" Margin="585,355,0,0" TextAlignment ="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" FontWeight="Bold"/>
+        <TextBlock Name ="PrixTotal" Text="0" HorizontalAlignment="Left" Height="25" Margin="715,355,0,0" TextAlignment ="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontWeight="Bold"/>
+
+    </Grid>
+</Page>
