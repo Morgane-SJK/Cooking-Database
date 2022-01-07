@@ -97,8 +97,8 @@ CREATE TABLE `cooking`.`recette`(
   INSERT INTO `cooking`.`client` VALUES ('G1','El Director','0651221281');
   INSERT INTO `cooking`.`client` VALUES ('C1','De la Fayette','0678451245');
   INSERT INTO `cooking`.`client` VALUES ('C2','Dupont','0687542154');
-  INSERT INTO `cooking`.`client` VALUES ('C3','Tchikladze', '0686367590');
-  INSERT INTO `cooking`.`client` VALUES ('C4','Senejko', '0798426028');
+  INSERT INTO `cooking`.`client` VALUES ('C3','Alban', '0686367590');
+  INSERT INTO `cooking`.`client` VALUES ('C4','Morgane', '0798426028');
 
   INSERT INTO `cooking`.`createur` VALUES ('CdR1','500','C3');
   INSERT INTO `cooking`.`createur` VALUES ('CdR2','500','C4');
