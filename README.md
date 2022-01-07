@@ -21,7 +21,7 @@ Passer une commande avec plusieurs plats et la payer (si le client ne possède p
 Après une commande validée, le prix de vente des recettes augmente et les stocks des produits utilisés sont décrémentés.
 
 <p>
- <img src="./images/Commandes.png" width="600">
+ <img src="./images/Page_Commandes.png" width="600">
 </p>
 
 -	Les créateurs de recette peuvent :
@@ -30,7 +30,11 @@ S’identifier ou se créer un compte sur la plateforme
 
 Saisir une recette (nom, liste des ingrédients et quantités, description, prix de vente)
 
-Afficher la liste de ses recettes
+Afficher la liste de leurs recettes
+
+<p>
+ <img src="./images/Page_Recettes.png" width="600">
+</p>
 
 -	Le gestionnaire de Cooking peut :
 
@@ -41,3 +45,7 @@ Accéder au tableau de bord de la semaine (avec le top 5 des recettes commandée
 Effectuer le réapprovisionnement des produits
 
 Supprimer une recette ou un cuisinier.
+
+<p>
+ <img src="./images/Page_Gestionnaire.png" width="600">
+</p>
