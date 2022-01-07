@@ -21,7 +21,7 @@ Passer une commande avec plusieurs plats et la payer (si le client ne possède p
 Après une commande validée, le prix de vente des recettes augmente et les stocks des produits utilisés sont décrémentés.
 
 <p>
- <img src="./images/Page_Commandes.png" width="600" style="border-color:red;" border="10">
+ <kbd><img src="./images/Page_Commandes.png" width="600"></kbd>
 </p>
 
 -	Les créateurs de recette peuvent :
@@ -33,7 +33,7 @@ Saisir une recette (nom, liste des ingrédients et quantités, description, prix
 Afficher la liste de leurs recettes
 
 <p>
- <img src="./images/Page_Recettes.png" width="600">
+ <kbd><img src="./images/Page_Recettes.png" width="600"></kbd>
 </p>
 
 -	Le gestionnaire de Cooking peut :
@@ -47,5 +47,5 @@ Effectuer le réapprovisionnement des produits
 Supprimer une recette ou un cuisinier.
 
 <p>
- <img src="./images/Page_Gestionnaire.png" width="600">
+ <kbd><img src="./images/Page_Gestionnaire.png" width="600"></kbd>
 </p>
