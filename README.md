@@ -21,7 +21,7 @@ Passer une commande avec plusieurs plats et la payer (si le client ne possède p
 Après une commande validée, le prix de vente des recettes augmente et les stocks des produits utilisés sont décrémentés.
 
 <p>
- <img src="./images/Page_Commandes.png" width="600">
+ <img src="./images/Page_Commandes.png" width="600" style="border-color:red;" border="10">
 </p>
 
 -	Les créateurs de recette peuvent :
