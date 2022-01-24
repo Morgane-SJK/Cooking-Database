@@ -6,6 +6,8 @@
 
 **Langages utilisés :** C#, XAML, SQL
 
+## Présentation du projet
+
 La start-up (fictive) Cooking propose des plats cuisinés que des clients peuvent commander via une interface. Les clients peuvent également avoir un profil de cuisinier et partager leurs recettes avec la communauté. La partie financière est basée sur une monnaie virtuelle (le « cook ») et permet aux clients de payer leurs plats et aux cuisiniers d’être rémunérés.
 
 Durant ce projet, nous avons donc créé une base de données contenant les informations sur les clients, les recettes, les produits ainsi que les fournisseurs, ainsi qu’une interface ayant plusieurs fonctionnalités. 
@@ -49,3 +51,27 @@ Supprimer une recette ou un cuisinier.
 <p>
  <kbd><img src="./images/Page_Gestionnaire.png" width="600"></kbd>
 </p>
+
+
+## Structure des fichiers
+
+Le projet est constitué de classes représentant les différentes entités de la start-up (les classes .cs) : Client, Createur, CréateurEtCommandes, IdUtilistauerActif, ListeIngredients, Plat, Produit, Recette, RootClass, TypesRecette (et AssemblyInfo). Vous pouvez les retrouver dans le dossier Cooking.
+
+Dans le dossier Cooking_GUI, vous trouverez les fichiers permettant de construire les pages de l'interface WPF (.xaml) ainsi que les classes permettant d'interagir avec cette interface (.xaml.cs) : App, MainWindow, PageCdR, PageClient, PageConnexion, PageCreationCdR, PageCreationCompte, PageCreationRecette, PageDemo et PageGestionnaire.
+
+Votre projet Visual Studio doit être de type Application WPF (.NET Framework).
+Tous les fichiers énoncés ci-dessus doivent être présents dans le même dossier. Si le projet se nomme Cooking, il suit cette structure :
+
+```dir
+│___Cooking
+│       bin
+│       obj
+│       App.xaml
+│       App.xaml.cs
+│       AssemblyInfo.cs
+│       Client.cs
+│       ...
+│       Cooking.csproj
+│
+└───Cooking.sln
+```
