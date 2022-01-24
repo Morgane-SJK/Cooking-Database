@@ -1,5 +1,7 @@
 # Cooking-Database
 
+*Food ordering system with WPF application*
+
 **Date de réalisation :** Mai 2020
 
 **Cadre du projet :** Cours "Bases de données et interopérabilité" en 3ème année à l’ESILV (1ère année du cycle ingénieur), réalisé en binôme avec Alban
